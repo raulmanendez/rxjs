@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="container-item">
+        <h3>Take Operator Usage</h3>
+        <p> Take Operator will stop observable <br>
+            after emitting x values take(x)<br>
+            Here x=5 (0 index)
+        </p>
+        <p>{{ takeArr1.join(',') }}</p>
+    </div>
+
+    <div class="container-item">
+        <h3>TakeLast Operator Usage</h3>
+        <p> TakeLast Operator will stop observable <br>
+            after emitting last x values from source obervable<br>
+            takeLast(x) Here x=4 : last 4 elements
+        </p>
+        <p>{{ takeLastArr1.join(',') }}</p>
+    </div>
+
+    <div class="container-item">
+        <h3>TakeUntil Operator Usage</h3>
+        <p> TakeUntil Operator will stop observable <br>
+            when x emits any value<br>
+            TakeUntil(x) Here x=click(#take-until-stop-timer)
+        </p>
+        <button (click)="takeUntil()">Start Timer</button>
+        <p>{{ takeUntillArr.join(',') }}</p>
+        <button id="take-until-stop-timer">Stop Timer</button>
+    </div>
+
+    <div class="container-item">
+        <h3>TakeWhile Operator Usage</h3>
+        <p> TakeWhile Operator will stop observable <br>
+            when x emits false value<br>
+            TakeWhile(x) Here x=predicate emitting boolean value
+        </p>
+        
+        <p>{{ takeWhileArr.join(',') }}</p>
+        
+    </div>
+</div>
