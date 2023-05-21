@@ -1,11 +1,50 @@
-<h1>Buffer Operator Usage</h1>
+<div class="container">
+    <div class="container-item">
+        <h3>Buffer Operator Usage</h3>
 
-<div>
-    <button (click)="startBuffer()">Start Buffer</button>
-    <h1>Buffer: </h1> <span>  {{ countArr.join(" | ") }}</span>
-</div>
+        <div>
+            <button (click)="startBuffer()">Start Buffer</button>
+            <h3>Buffer: </h3> <span> {{ countArr.join(" | ") }}</span>
+        </div>
 
-<div>
-    <button id="button-collect">Collect Buffer</button>
-    <h1>Collect Buffer: </h1> <span>  {{ buffer.join(",") }}</span>
+        <div>
+            <button id="button-collect">Collect Buffer</button>
+            <h3>Collect Buffer: </h3> <span> {{ buffer.join(",") }}</span>
+        </div>
+
+    </div>
+
+    <div class="container-item">
+        <h3>BufferCount Operator Usage</h3>
+
+        <div>
+            <h3>BufferCount wth bufferSize only : </h3> <span> {{ bufferCountArr1.join(" | ") }}</span>
+        </div>
+
+        <div>
+            <h3>BufferCount With startBufferEvery : </h3> <span> {{ bufferCountArr2.join(" || ") }}</span>
+        </div>
+    </div>
+
+    <div class="container-item">
+        <h3>BufferTime Operator Usage</h3>
+
+        <div>
+            <h3>BufferTime : </h3> <span> {{ bufferCountArr3.join(" # ") }}</span>
+        </div>
+    </div>
+
+    <div class="container-item">
+        <h3>BufferToggle Operator Usage</h3>
+        <div>
+            <h3>BufferToggle Output : </h3> <span> {{ bufferCountArr4.join(" # ") }}</span>
+        </div>
+    </div>
+
+    <div class="container-item">
+        <h3>BufferWhen Operator Usage: (After 4 it'll return array)</h3>
+        <div>
+            <h3>BufferWhen Output : </h3> <span> {{ bufferCountArr5.join(" * ") }}</span>
+        </div>
+    </div>
 </div>

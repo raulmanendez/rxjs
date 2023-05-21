@@ -1,14 +1,18 @@
-<h1>RxJs Observables</h1>
+<div class="container">
+    <div class="container-item">
+        <h1>RxJs Observables</h1>
 
-<button id="ob-button">Observe</button>
+        <button id="ob-button">Observe (Check Console)</button>
 
-<div>
-    <button (click)="startInterval()">Start Count</button>
-</div>
+        <div>
+            <button (click)="startInterval()">Start Count</button>
+        </div>
 
-<div>
-    <br>
-    <span *ngFor="let i of intervals">{{ i }}  </span>
-    <br>
-    <button (click)="stopInterval()">End Count</button>
+        <div>
+            <br>
+            <span *ngFor="let i of intervals">{{ i }} </span>
+            <br>
+            <button (click)="stopInterval()">End Count</button>
+        </div>
+    </div>
 </div>
