@@ -7,6 +7,7 @@ import { BasicsComponent } from './basics/basics.component';
 import { OperatorsComponent } from './operators/operators.component';
 import { BufferComponent } from './buffer/buffer.component';
 import { TakeComponent } from './take/take.component';
+import { SkipComponent } from './skip/skip.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TakeComponent } from './take/take.component';
     BasicsComponent,
     OperatorsComponent,
     BufferComponent,
-    TakeComponent
+    TakeComponent,
+    SkipComponent
   ],
   imports: [
     BrowserModule,

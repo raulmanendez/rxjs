@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="container-item">
+        <h3>Skip Operator Usage</h3>
+        <p> Skip Operator will skip x values<br>
+            from observable then emit<br>
+            Here x=4 (0 index)
+        </p>
+        <p>{{ skipArr1.join(',') }}</p>
+    </div>
+
+    <div class="container-item">
+        <h3>SkipLast Operator Usage</h3>
+        <p> SkipLast Operator will skip x values of observable <br>
+            skipLast(x) Here x=4 : last 4 elements
+        </p>
+        <p>{{ skipLastArr1.join(',') }}</p>
+    </div>
+
+    <div class="container-item">
+        <h3>SkipUntil Operator Usage</h3>
+        <p> SkipUntil Operator will emit values <br>
+            skipping untill x does't emit something<br>
+            SkipUntil(x) Here x=click(#skip-until-start-timer)
+        </p>
+        <p>{{ skipUntillArr.join(',') }}</p>
+        <button id="skip-until-start-timer">Show After Skip</button>
+    </div>
+
+    <div class="container-item">
+        <h3>SkipWhile Operator Usage</h3>
+        <p> SkipWhile Operator will start emitting <br>
+            when x emits false value<br>
+            SkipWhile(x) Here x=predicate emitting boolean value
+        </p>
+        
+        <p>{{ skipWhileArr.join(',') }}</p>
+        
+    </div>
+</div>
