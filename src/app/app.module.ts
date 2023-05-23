@@ -8,6 +8,8 @@ import { OperatorsComponent } from './operators/operators.component';
 import { BufferComponent } from './buffer/buffer.component';
 import { TakeComponent } from './take/take.component';
 import { SkipComponent } from './skip/skip.component';
+import { DistinctComponent } from './distinct/distinct.component';
+import { FilteringComponent } from './filtering/filtering.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { SkipComponent } from './skip/skip.component';
     OperatorsComponent,
     BufferComponent,
     TakeComponent,
-    SkipComponent
+    SkipComponent,
+    DistinctComponent,
+    FilteringComponent
   ],
   imports: [
     BrowserModule,
