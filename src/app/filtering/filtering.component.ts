@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { audit, debounce, filter, first, interval, last, of, sample, take, throttle } from 'rxjs';
+import { audit, debounce, elementAt, filter, first, interval, last, of, sample, single, take, throttle } from 'rxjs';
 
 @Component({
   selector: 'app-filtering',
@@ -18,6 +18,7 @@ export class FilteringComponent implements OnInit {
     this.debounceOperator()
     this.firstOperator()
     this.lastOperator()
+    this.more();
   }
 
   filteredArray = new Array()
@@ -75,6 +76,39 @@ export class FilteringComponent implements OnInit {
 
     of(1, 3, 5, 7, 9).pipe(last(x => x > 7)).subscribe(data => {
       this.last = data;
+    })
+  }
+
+  more() {
+    this.elementAtOperator();
+    this.ignoreElementsOperator();
+    this.singleOperator()
+  }
+
+  elementAt=0;
+  elementAtOperator(){
+    of(1,2,3,4,5).pipe(elementAt(2)).subscribe(data => {
+      this.elementAt=data;
+    })
+  }
+
+  ignoreELementComplete=""
+  ignoreElementsOperator(){
+    interval(1000).pipe(take(5)).subscribe((data) => {
+      console.log(data)
+    },
+    (error)=>{
+      console.log(error)
+    },
+    () => {
+      this.ignoreELementComplete="ignore element completed.."
+    })
+  }
+
+  single=0;
+  singleOperator() {
+    of(1,2,3,4).pipe(single(x => x > 3)).subscribe(data => {
+      this.single=data;
     })
   }
 
