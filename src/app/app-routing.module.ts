@@ -7,6 +7,8 @@ import { TakeComponent } from './take/take.component';
 import { SkipComponent } from './skip/skip.component';
 import { DistinctComponent } from './distinct/distinct.component';
 import { FilteringComponent } from './filtering/filtering.component';
+import { TransformComponent } from './transform/transform.component';
+import { CreationComponent } from './creation/creation.component';
 
 const routes: Routes = [
   { path: 'operator', component: OperatorsComponent },
@@ -16,6 +18,9 @@ const routes: Routes = [
   { path: 'skip', component: SkipComponent },
   { path: 'distinct', component: DistinctComponent },
   { path: 'filtering', component: FilteringComponent },
+  { path: 'transform', component: TransformComponent },
+  { path: 'creation', component: CreationComponent },
+  
   
 ];
 

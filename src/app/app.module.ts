@@ -10,6 +10,8 @@ import { TakeComponent } from './take/take.component';
 import { SkipComponent } from './skip/skip.component';
 import { DistinctComponent } from './distinct/distinct.component';
 import { FilteringComponent } from './filtering/filtering.component';
+import { TransformComponent } from './transform/transform.component';
+import { CreationComponent } from './creation/creation.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FilteringComponent } from './filtering/filtering.component';
     TakeComponent,
     SkipComponent,
     DistinctComponent,
-    FilteringComponent
+    FilteringComponent,
+    TransformComponent,
+    CreationComponent
   ],
   imports: [
     BrowserModule,
