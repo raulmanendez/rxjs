@@ -12,6 +12,7 @@ import { DistinctComponent } from './distinct/distinct.component';
 import { FilteringComponent } from './filtering/filtering.component';
 import { TransformComponent } from './transform/transform.component';
 import { CreationComponent } from './creation/creation.component';
+import { HigherOrderComponent } from './higher-order/higher-order.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CreationComponent } from './creation/creation.component';
     DistinctComponent,
     FilteringComponent,
     TransformComponent,
-    CreationComponent
+    CreationComponent,
+    HigherOrderComponent
   ],
   imports: [
     BrowserModule,

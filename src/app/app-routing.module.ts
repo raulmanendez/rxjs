@@ -9,6 +9,7 @@ import { DistinctComponent } from './distinct/distinct.component';
 import { FilteringComponent } from './filtering/filtering.component';
 import { TransformComponent } from './transform/transform.component';
 import { CreationComponent } from './creation/creation.component';
+import { HigherOrderComponent } from './higher-order/higher-order.component';
 
 const routes: Routes = [
   { path: 'operator', component: OperatorsComponent },
@@ -20,8 +21,7 @@ const routes: Routes = [
   { path: 'filtering', component: FilteringComponent },
   { path: 'transform', component: TransformComponent },
   { path: 'creation', component: CreationComponent },
-  
-  
+  { path: 'higher-order', component: HigherOrderComponent },
 ];
 
 @NgModule({
