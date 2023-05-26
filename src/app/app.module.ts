@@ -13,6 +13,8 @@ import { FilteringComponent } from './filtering/filtering.component';
 import { TransformComponent } from './transform/transform.component';
 import { CreationComponent } from './creation/creation.component';
 import { HigherOrderComponent } from './higher-order/higher-order.component';
+import { SubjectComponent } from './subject/subject.component';
+import { HotColdObsComponent } from './hot-cold-obs/hot-cold-obs.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HigherOrderComponent } from './higher-order/higher-order.component';
     FilteringComponent,
     TransformComponent,
     CreationComponent,
-    HigherOrderComponent
+    HigherOrderComponent,
+    SubjectComponent,
+    HotColdObsComponent
   ],
   imports: [
     BrowserModule,
