@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, connectable, interval, share, take } from 'rxjs';
 
 @Component({
   selector: 'app-hot-cold-obs',
@@ -13,6 +13,9 @@ export class HotColdObsComponent implements OnInit {
   ngOnInit(): void {
     this.coldObs()
     this.hotObs()
+
+    this.convertColdToHot()
+    this.shareOperator()
   }
 
   //emitting values inside- different values for all observers
@@ -52,4 +55,38 @@ export class HotColdObsComponent implements OnInit {
     })
   }
 
+  conversionArray=new Array()
+  convertColdToHot() {
+    let source = connectable(interval(1000));
+
+    source.pipe(take(10)).subscribe(data => {
+      this.conversionArray.push(data);
+    })
+
+    setTimeout(() => {
+      source.pipe(take(10)).subscribe(data => {
+        this.conversionArray.push(data);
+      })
+    }, 5000);
+    
+
+    source.connect()
+  }
+
+  shareArray=new Array()
+  shareOperator() {
+    let source = interval(1000).pipe(take(10),share());
+
+    source.subscribe(data => {
+      this.shareArray.push(data);
+    })
+
+    setTimeout(() => {
+      source.subscribe(data => {
+        this.shareArray.push(data);
+      })
+    }, 5000);
+  
+    //no need to connect now,
+  }
 }
