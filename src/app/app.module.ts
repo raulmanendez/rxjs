@@ -15,6 +15,7 @@ import { CreationComponent } from './creation/creation.component';
 import { HigherOrderComponent } from './higher-order/higher-order.component';
 import { SubjectComponent } from './subject/subject.component';
 import { HotColdObsComponent } from './hot-cold-obs/hot-cold-obs.component';
+import { ErrorHandlingComponent } from './error-handling/error-handling.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HotColdObsComponent } from './hot-cold-obs/hot-cold-obs.component';
     CreationComponent,
     HigherOrderComponent,
     SubjectComponent,
-    HotColdObsComponent
+    HotColdObsComponent,
+    ErrorHandlingComponent
   ],
   imports: [
     BrowserModule,
