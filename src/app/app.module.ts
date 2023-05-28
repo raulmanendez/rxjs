@@ -16,6 +16,7 @@ import { HigherOrderComponent } from './higher-order/higher-order.component';
 import { SubjectComponent } from './subject/subject.component';
 import { HotColdObsComponent } from './hot-cold-obs/hot-cold-obs.component';
 import { ErrorHandlingComponent } from './error-handling/error-handling.component';
+import { JoinCreationComponent } from './join-creation/join-creation.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ErrorHandlingComponent } from './error-handling/error-handling.componen
     HigherOrderComponent,
     SubjectComponent,
     HotColdObsComponent,
-    ErrorHandlingComponent
+    ErrorHandlingComponent,
+    JoinCreationComponent
   ],
   imports: [
     BrowserModule,
