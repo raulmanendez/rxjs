@@ -14,6 +14,7 @@ import { SubjectComponent } from './subject/subject.component';
 import { HotColdObsComponent } from './hot-cold-obs/hot-cold-obs.component';
 import { ErrorHandlingComponent } from './error-handling/error-handling.component';
 import { JoinCreationComponent } from './join-creation/join-creation.component';
+import { SchedulerComponent } from './scheduler/scheduler.component';
 
 const routes: Routes = [
   { path: 'operator', component: OperatorsComponent },
@@ -30,6 +31,8 @@ const routes: Routes = [
   { path: 'cold-hot-observables', component: HotColdObsComponent },
   { path: 'error-handling', component: ErrorHandlingComponent },
   { path: 'join-creation', component: JoinCreationComponent },
+  { path: 'scheduler', component: SchedulerComponent },
+  
   
 ];
 
