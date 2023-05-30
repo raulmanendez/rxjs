@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { defer, generate, of, range } from 'rxjs';
+import { defer, generate, of, range, timer } from 'rxjs';
 import { ajax } from 'rxjs/ajax'
 
 @Component({
@@ -12,12 +12,20 @@ export class CreationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.timerUsage()
     this.generateUsage()
     this.rangeUsage()
     this.deferOperatorUsage()
 
     this.ajaxOperator()
     this.ajaxGetJsonOperator()
+  }
+
+  timerArray=new Array()
+  timerUsage() {
+    timer(1000,2000).subscribe(data=> {
+      this.timerArray.push(data)
+    })
   }
 
   generateArray=new Array()

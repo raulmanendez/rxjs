@@ -18,6 +18,9 @@ import { HotColdObsComponent } from './hot-cold-obs/hot-cold-obs.component';
 import { ErrorHandlingComponent } from './error-handling/error-handling.component';
 import { JoinCreationComponent } from './join-creation/join-creation.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
+import { MathematicalComponent } from './mathematical/mathematical.component';
+import { ConditionalComponent } from './conditional/conditional.component';
+import { UtilityComponent } from './utility/utility.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { SchedulerComponent } from './scheduler/scheduler.component';
     HotColdObsComponent,
     ErrorHandlingComponent,
     JoinCreationComponent,
-    SchedulerComponent
+    SchedulerComponent,
+    MathematicalComponent,
+    ConditionalComponent,
+    UtilityComponent
   ],
   imports: [
     BrowserModule,
