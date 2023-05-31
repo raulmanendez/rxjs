@@ -1,6 +1,32 @@
 <div class="container">
     <div class="container-item">
+        <h3>delay Operator Usage</h3>
+        <p>{{ delayArray | json }}</p>
+    </div>
+
+    <div class="container-item">
+        <h3>materialize Operator Usage</h3>
+        <p>{{ materializeArray | json }}</p>
+    </div>
+
+    <div class="container-item">
+        <h3>deMaterialize Operator Usage</h3>
+        <p>{{ deMaterializeArray }}</p>
+    </div>
+
+    <div class="container-item">
+        <h3>observeOn Operator Usage</h3>
+        <p>{{ observeOnArray.join(" _ ") }}</p>
+    </div>
+
+    <div class="container-item">
+        <h3>subscribeOn Operator Usage</h3>
+        <p>{{ subscribeOnArray.join(" _ ") }}</p>
+    </div>
+
+    <div class="container-item">
         <h3>toArray Operator Usage</h3>
         <p>{{ toArray }}</p>
     </div>
+
 </div>
