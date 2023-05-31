@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { combineLatest, concat, forkJoin, interval, map, merge, of, partition, race, take, zip } from 'rxjs';
+import { combineLatest, combineLatestAll, concat, concatAll, exhaustAll, forkJoin, interval, map, merge, mergeAll, of, partition, race, switchAll, take, zip } from 'rxjs';
 
 @Component({
   selector: 'app-join-creation',
@@ -11,6 +11,12 @@ export class JoinCreationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.mergeAllUsage()
+    this.switchAllUsage()
+    this.exhaustAllUsage()
+    this.concatAllUsage()
+    this.combineLatestAllUsage()
+
     this.combineLatestUsage()
     this.concatUsage()
     this.forkJoinUsage()
@@ -18,6 +24,71 @@ export class JoinCreationComponent implements OnInit {
     this.partitionUsage()
     this.raceUsage()
     this.zipUsage()
+  }
+
+  mergeAllArray=new Array()
+  mergeAllUsage() {
+    let source1=interval(1000).pipe(take(4))
+    
+    source1.pipe(map(count => {
+      return interval(500).pipe(take(4))
+    }),
+    mergeAll()
+    ).subscribe(data=> {
+      this.mergeAllArray.push(data)
+    })
+  }
+
+  switchAllArray=new Array()
+  switchAllUsage() {
+    let source1=interval(1000).pipe(take(4))
+    
+    source1.pipe(map(count => {
+      return interval(500).pipe(take(4))
+    }),
+    switchAll()
+    ).subscribe(data=> {
+      this.switchAllArray.push(data)
+    })
+  }
+
+  exhaustAllArray=new Array()
+  exhaustAllUsage() {
+    let source1=interval(1000).pipe(take(4))
+    
+    source1.pipe(map(count => {
+      return interval(500).pipe(take(4))
+    }),
+    exhaustAll()
+    ).subscribe(data=> {
+      this.exhaustAllArray.push(data)
+    })
+  }
+
+  concatAllArray=new Array()
+  concatAllUsage() {
+    let source1=of(1,2,3)
+    
+    source1.pipe(map(count => {
+      return interval(1000).pipe(take(4))
+    }),
+    concatAll()
+    ).subscribe(data=> {
+      this.concatAllArray.push(data)
+    })
+  }
+
+  combineLatestAllArray=new Array()
+  combineLatestAllUsage() {
+    let source1=of('a','b','c')
+    
+    source1.pipe(map(x => {
+      return interval(1000).pipe(take(4))
+    }),
+    combineLatestAll()
+    ).subscribe(data=> {
+      this.combineLatestAllArray.push(data)
+    })
   }
 
   combineLatestArray=new Array()
