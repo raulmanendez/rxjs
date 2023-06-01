@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { combineLatest, combineLatestAll, concat, concatAll, exhaustAll, forkJoin, interval, map, merge, mergeAll, of, partition, race, switchAll, take, zip } from 'rxjs';
+import { combineLatest, combineLatestAll, concat, concatAll, exhaustAll, forkJoin, interval, map, merge, mergeAll, of, partition, race, startWith, switchAll, take, withLatestFrom, zip } from 'rxjs';
 
 @Component({
   selector: 'app-join-creation',
@@ -11,6 +11,8 @@ export class JoinCreationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.withLatestFromUsage()
+    this.startsWithUsage()
     this.mergeAllUsage()
     this.switchAllUsage()
     this.exhaustAllUsage()
@@ -25,6 +27,26 @@ export class JoinCreationComponent implements OnInit {
     this.raceUsage()
     this.zipUsage()
   }
+
+
+  withLatestFromArray=new Array()
+  withLatestFromUsage() {
+    let source1=interval(1000).pipe(take(5))
+    
+    source1.pipe(withLatestFrom(interval(500).pipe(take(5)))).subscribe(data=> {
+      this.withLatestFromArray.push(data)
+    })
+  }
+
+  startsWithArray=new Array()
+  startsWithUsage() {
+    let source1=of(1,2,3,4)
+    
+    source1.pipe(startWith('a','b','c')).subscribe(data=> {
+      this.startsWithArray.push(data)
+    })
+  }
+
 
   mergeAllArray=new Array()
   mergeAllUsage() {
